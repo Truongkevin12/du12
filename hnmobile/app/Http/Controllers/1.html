@@ -1,0 +1,16 @@
+<div data-block="minicart" class="minicart-wrapper">
+    <a class="action showcart" href="{{}}" data-bind="scope: 'minicart_content'">
+        <span class="text">My Cart</span>
+        <span class="counter qty" data-bind="css: { empty: !!getCartParam('summary_count') == false &amp;&amp; !isLoading() }, blockLoader: isLoading">
+            <span class="counter-number"><!-- ko text: getCartParam('summary_count') -->2<!-- /ko --></span>
+            <span class="counter-label">
+            <!-- ko if: getCartParam('summary_count') -->
+                <!-- ko text: getCartParam('summary_count') -->2<!-- /ko -->
+                <!-- ko i18n: 'items' --><span>items</span><!-- /ko -->
+            <!-- /ko -->
+            </span>
+        </span>
+    </a>
+</div>
+
+
